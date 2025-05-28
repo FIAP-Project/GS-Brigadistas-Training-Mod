@@ -80,7 +80,8 @@ subprojects {
                     minecraft_version_range: minecraft_version_range_forge,
                     neo_version_range: neo_version_range,
                     neo_loader_version_range: neo_loader_version_range,
-                    cerbons_api_version_range_forge: cerbons_api_version_range_forge
+                    cerbons_api_version_range_forge: cerbons_api_version_range_forge,
+                    geckolib_version_range_forge: geckolib_version_range_forge
             ]
             filePatterns = ["META-INF/neoforge.mods.toml", "pack.mcmeta"]
         }
@@ -193,6 +194,13 @@ allprojects {
         maven {
             name "Ladysnake Mods"
             url "https://maven.ladysnake.org/releases"
+        }
+        maven {
+            name = 'GeckoLib'
+            url 'https://dl.cloudsmith.io/public/geckolib3/geckolib/maven/'
+            content {
+                includeGroup("software.bernie.geckolib")
+            }
         }
         flatDir {
             dir "libs"

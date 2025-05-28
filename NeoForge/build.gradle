@@ -32,6 +32,8 @@ dependencies {
     // NeoForge Dependencies
     modImplementation "com.cerbon:cerbons_api-neoforge-${minecraft_version}:${cerbons_api_version}"
 
+    implementation "software.bernie.geckolib:geckolib-neoforge-${minecraft_version}:${geckolib_version}"
+
     implementation include("io.github.llamalad7:mixinextras-neoforge:${mixin_extras_version}")
 
     // Useful Mods
