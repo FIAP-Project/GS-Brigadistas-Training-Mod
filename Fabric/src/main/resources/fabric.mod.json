@@ -18,10 +18,10 @@
   "environment": "*",
   "entrypoints": {
     "main": [
-      "com.cerbon.ml_template.fabric.ModNameFabric"
+      "com.cerbon.brigadista_training.fabric.BrigadistaTrainingFabric"
     ],
     "client": [
-      "com.cerbon.ml_template.fabric.ModNameFabric"
+      "com.cerbon.brigadista_training.fabric.BrigadistaTrainingFabric"
     ]
   },
   "mixins": [
