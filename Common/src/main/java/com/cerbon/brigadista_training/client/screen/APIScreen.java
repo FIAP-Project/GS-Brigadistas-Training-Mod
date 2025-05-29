@@ -53,7 +53,13 @@ public class APIScreen extends Screen {
         return false;
     }
 
+    @Override
+    public boolean isPauseScreen() {
+        return false;
+    }
+
     private void onSave(Button button) {
+        //TODO: Validate token?
         if (!apiBox.getValue().isEmpty() && client.screen == this)
             client.setScreen(null);
     }
