@@ -21,7 +21,7 @@ public class NeoClientEvents {
         CapabilityUtils.getLevelEventScheduler(event.getPlayer().level()).addEvent(
                 new TimedEvent(
                         () -> {
-                            if (BrigadistaTraining.config.apiKey.isEmpty())
+                            if (BrigadistaTraining.config.apiKey.isBlank())
                                 Minecraft.getInstance().setScreen(new APIScreen());
                         },
                         60
