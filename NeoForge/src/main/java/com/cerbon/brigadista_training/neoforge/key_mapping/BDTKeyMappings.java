@@ -1,6 +1,7 @@
 package com.cerbon.brigadista_training.neoforge.key_mapping;
 
 import com.cerbon.brigadista_training.client.screen.QuizScreen;
+import com.cerbon.cerbons_api.api.static_utilities.MiscUtils;
 import com.mojang.blaze3d.platform.InputConstants;
 import net.minecraft.client.KeyMapping;
 import net.minecraft.client.Minecraft;
@@ -15,12 +16,12 @@ public class BDTKeyMappings {
                     KeyConflictContext.IN_GAME,
                     InputConstants.Type.KEYSYM,
                     GLFW.GLFW_KEY_G,
-                    "Training"
+                    "Debug Brigadista Training Mod"
             )
     );
 
     public static void handleKeyPressed() {
-        if (OPEN_QUIZ_SCREEN_MAPPING.get().consumeClick())
+        if (OPEN_QUIZ_SCREEN_MAPPING.get().consumeClick() && MiscUtils.isDevelopmentEnvironment())
             Minecraft.getInstance().setScreen(new QuizScreen());
     }
 }
