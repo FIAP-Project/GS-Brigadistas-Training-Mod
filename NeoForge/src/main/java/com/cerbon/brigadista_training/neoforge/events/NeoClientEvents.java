@@ -18,10 +18,12 @@ public class NeoClientEvents {
     @SubscribeEvent
     public static void onClientJoinWorld(ClientPlayerNetworkEvent.LoggingIn event) {
         //Add delay because the screen was not showing
-        //TODO: Prevent screen if API key has already being setup
         CapabilityUtils.getLevelEventScheduler(event.getPlayer().level()).addEvent(
                 new TimedEvent(
-                        () -> Minecraft.getInstance().setScreen(new APIScreen()),
+                        () -> {
+                            if (BrigadistaTraining.config.apiKey.isEmpty())
+                                Minecraft.getInstance().setScreen(new APIScreen());
+                        },
                         60
                 )
         );

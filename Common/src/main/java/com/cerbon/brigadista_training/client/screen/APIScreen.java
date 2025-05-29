@@ -1,5 +1,8 @@
 package com.cerbon.brigadista_training.client.screen;
 
+import com.cerbon.brigadista_training.BrigadistaTraining;
+import com.cerbon.brigadista_training.config.BDTConfig;
+import me.shedaniel.autoconfig.AutoConfig;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.GuiGraphics;
 import net.minecraft.client.gui.components.Button;
@@ -60,7 +63,10 @@ public class APIScreen extends Screen {
 
     private void onSave(Button button) {
         //TODO: Validate token?
-        if (!apiBox.getValue().isEmpty() && client.screen == this)
+        if (!apiBox.getValue().isBlank() && client.screen == this) {
+            BrigadistaTraining.config.apiKey = apiBox.getValue();
+            AutoConfig.getConfigHolder(BDTConfig.class).save();
             client.setScreen(null);
+        }
     }
 }
