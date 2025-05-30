@@ -25,36 +25,33 @@ public class ApiClient {
 
     public String get(String endpoint) throws Exception {
         HttpRequest.Builder request = newRequest(endpoint).GET();
-        headers.forEach(request::header);
         return send(request);
     }
 
     public String post(String endpoint, String payload) throws Exception {
         HttpRequest.Builder request = newRequest(endpoint).POST(HttpRequest.BodyPublishers.ofString(payload));
-        headers.forEach(request::header);
         return send(request);
     }
 
     public String put(String endpoint, String payload) throws Exception {
         HttpRequest.Builder request = newRequest(endpoint).PUT(HttpRequest.BodyPublishers.ofString(payload));
-        headers.forEach(request::header);
         return send(request);
     }
 
     public String delete(String endpoint) throws Exception {
         HttpRequest.Builder request = newRequest(endpoint).DELETE();
-        headers.forEach(request::header);
         return send(request);
     }
 
     public String delete(String endpoint, String payload) throws Exception {
         HttpRequest.Builder request = newRequest(endpoint).method("DELETE", HttpRequest.BodyPublishers.ofString(payload));
-        headers.forEach(request::header);
         return send(request);
     }
 
     private HttpRequest.Builder newRequest(String endpoint) {
-        return HttpRequest.newBuilder(this.baseUri.resolve(endpoint));
+        var builder = HttpRequest.newBuilder(this.baseUri.resolve(endpoint));
+        this.headers.forEach(builder::header);
+        return builder;
     }
 
     private String send(HttpRequest.Builder request) throws Exception {
