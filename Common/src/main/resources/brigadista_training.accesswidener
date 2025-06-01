@@ -1,6 +1,7 @@
 accessWidener   v2  named
 
 # Classes
+accessible class net/minecraft/world/level/block/entity/BlockEntityType$BlockEntitySupplier
 
 # Methods
 

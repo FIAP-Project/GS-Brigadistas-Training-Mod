@@ -1,5 +1,7 @@
 package com.cerbon.brigadista_training;
 
+import com.cerbon.brigadista_training.block.BDTBlocks;
+import com.cerbon.brigadista_training.block_entity.BDTBlockEntities;
 import com.cerbon.brigadista_training.config.BDTConfig;
 import com.mojang.logging.LogUtils;
 import me.shedaniel.autoconfig.AutoConfig;
@@ -18,5 +20,8 @@ public class BrigadistaTraining {
 		AutoConfig.register(BDTConfig.class, JanksonConfigSerializer::new);
 		AutoConfig.getConfigHolder(BDTConfig.class).save();
 		config = AutoConfig.getConfigHolder(BDTConfig.class).get();
+
+		BDTBlocks.register();
+		BDTBlockEntities.register();
 	}
 }
