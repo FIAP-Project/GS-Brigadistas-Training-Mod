@@ -20,26 +20,23 @@ public class InfoOverlay implements LayeredDraw.Layer {
     private final ResourceLocation INFO_OVERLAY_TEXTURE = ResourceLocation.fromNamespaceAndPath(BrigadistaTraining.MOD_ID, "textures/gui/screen/info_overlay.png");
 
     private static float alpha = 0.0F;
-    private static int fadeDir = 0;
+    private static int fadeDir = 0; // 1 Fade-in; -1 Fade-out
 
     private static String text = "";
-    private static boolean isRendering = false;
 
     public static final InfoOverlay INSTANCE = new InfoOverlay();
 
     public static void show(String msg) {
         text = msg;
         fadeDir = 1;
-        isRendering = true;
     }
 
     public static void hide() {
         fadeDir = -1;
-        isRendering = false;
     }
 
     public static boolean isRendering() {
-        return isRendering;
+        return alpha > 0.0F;
     }
 
     @Override
