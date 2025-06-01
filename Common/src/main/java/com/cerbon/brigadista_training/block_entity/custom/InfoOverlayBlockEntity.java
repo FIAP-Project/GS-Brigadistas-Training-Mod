@@ -21,6 +21,7 @@ public class InfoOverlayBlockEntity extends BlockEntity {
         super(BDTBlockEntities.INFO_OVERLAY_BLOCK_ENTITY.get(), pos, blockState);
     }
 
+    //TODO: If we decide to make the mod work in multiplayer, this might cause problems (Need Tests). Possible fix, make it in serverTick, send a packet to the clients and save wasInRange within each player.
     public static void clientTick(Level level, BlockPos blockPos, BlockState blockState, InfoOverlayBlockEntity blockEntity) {
         if (!level.isClientSide()) return;
 
