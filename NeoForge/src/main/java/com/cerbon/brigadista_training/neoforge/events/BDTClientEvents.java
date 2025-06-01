@@ -17,6 +17,7 @@ public class BDTClientEvents {
     @SubscribeEvent
     public static void onRegisterKeyMappings(RegisterKeyMappingsEvent event) {
         event.register(BDTKeyMappings.OPEN_QUIZ_SCREEN_MAPPING.get());
+        event.register(BDTKeyMappings.INFO_OVERLAY_MAPPING.get());
     }
 
     @SubscribeEvent
