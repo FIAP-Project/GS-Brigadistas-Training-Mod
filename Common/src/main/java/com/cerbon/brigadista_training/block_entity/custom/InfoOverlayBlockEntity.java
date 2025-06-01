@@ -2,14 +2,15 @@ package com.cerbon.brigadista_training.block_entity.custom;
 
 import com.cerbon.brigadista_training.block_entity.BDTBlockEntities;
 import com.cerbon.brigadista_training.client.gui.InfoOverlay;
+import net.fabricmc.api.EnvType;
+import net.fabricmc.api.Environment;
+import net.minecraft.client.Minecraft;
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.phys.AABB;
-
-import java.util.List;
 
 public class InfoOverlayBlockEntity extends BlockEntity {
     private final AABB INFO_BOX = new AABB(this.getBlockPos()).inflate(6.0D);
@@ -21,23 +22,22 @@ public class InfoOverlayBlockEntity extends BlockEntity {
         super(BDTBlockEntities.INFO_OVERLAY_BLOCK_ENTITY.get(), pos, blockState);
     }
 
-    //TODO: If we decide to make the mod work in multiplayer, this might cause problems (Need Tests). Possible fix, make it in serverTick, send a packet to the clients and save wasInRange within each player.
+    @Environment(EnvType.CLIENT)
     public static void clientTick(Level level, BlockPos blockPos, BlockState blockState, InfoOverlayBlockEntity blockEntity) {
         if (!level.isClientSide()) return;
 
-        List<Player> players = level.getEntitiesOfClass(Player.class, blockEntity.INFO_BOX);
+        Player player = Minecraft.getInstance().player;
+        if (player == null) return;
 
-        for (Player player : players) {
-            boolean inRange = blockEntity.INFO_BOX.contains(player.position());
+        boolean inRange = blockEntity.INFO_BOX.contains(player.position());
 
-            if (inRange && !blockEntity.wasInRange)
-                InfoOverlay.show(blockEntity.text);
+        if (inRange && !blockEntity.wasInRange)
+            InfoOverlay.show(blockEntity.text);
 
-            else if (!inRange && blockEntity.wasInRange)
-                InfoOverlay.hide();
+        else if (!inRange && blockEntity.wasInRange)
+            InfoOverlay.hide();
 
-            blockEntity.wasInRange = inRange;
-        }
+        blockEntity.wasInRange = inRange;
     }
 
     public static void serverTick(Level level, BlockPos blockPos, BlockState blockState, InfoOverlayBlockEntity blockEntity) {}
