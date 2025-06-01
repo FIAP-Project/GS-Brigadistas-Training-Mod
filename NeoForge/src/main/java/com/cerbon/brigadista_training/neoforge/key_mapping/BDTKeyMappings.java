@@ -38,6 +38,9 @@ public class BDTKeyMappings {
             Minecraft.getInstance().setScreen(new QuizScreen());
 
         else if (INFO_OVERLAY_MAPPING.get().consumeClick() && MiscUtils.isDevelopmentEnvironment())
-            InfoOverlay.shouldRender = !InfoOverlay.shouldRender;
+            if (!InfoOverlay.isRendering())
+                InfoOverlay.show("Bitucas mal apagadas iniciam quase 90 % dos incêndios humanos."); // Test message
+            else
+                InfoOverlay.hide();
     }
 }

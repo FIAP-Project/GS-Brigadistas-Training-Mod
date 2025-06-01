@@ -21,6 +21,6 @@ public class BDTClientEvents {
 
     @SubscribeEvent
     public static void onRegisterOverlays(RegisterGuiLayersEvent event) {
-        event.registerBelow(VanillaGuiLayers.DEBUG_OVERLAY, ResourceLocation.fromNamespaceAndPath(BrigadistaTraining.MOD_ID, "info_overlay"), new InfoOverlay());
+        event.registerBelow(VanillaGuiLayers.DEBUG_OVERLAY, ResourceLocation.fromNamespaceAndPath(BrigadistaTraining.MOD_ID, "info_overlay"), InfoOverlay.INSTANCE);
     }
 }
