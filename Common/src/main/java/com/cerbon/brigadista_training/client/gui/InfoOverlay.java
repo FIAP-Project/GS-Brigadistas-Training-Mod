@@ -79,7 +79,7 @@ public class InfoOverlay implements LayeredDraw.Layer {
                 FastColor.ARGB32.colorFromFloat(alpha, 1.0F, 0.6666666667F, 0F)
         );
 
-        List<FormattedCharSequence> lines = client.font.split(FormattedText.of(text), 150);
+        List<FormattedCharSequence> lines = client.font.split(FormattedText.of(text), 154);
 
         int lineY = y + 6;
         for (FormattedCharSequence line : lines) {
