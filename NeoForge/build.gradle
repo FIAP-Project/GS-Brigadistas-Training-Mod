@@ -30,13 +30,13 @@ dependencies {
     neoForge "net.neoforged:neoforge:${neo_version}"
 
     // NeoForge Dependencies
-    modImplementation "com.cerbon:cerbons_api-neoforge-${minecraft_version}:${cerbons_api_version}"
+    modImplementation include("com.cerbon:cerbons_api-neoforge-${minecraft_version}:${cerbons_api_version}")
 
-    modApi("me.shedaniel.cloth:cloth-config-neoforge:${cloth_config_version}") {
+    include(modApi("me.shedaniel.cloth:cloth-config-neoforge:${cloth_config_version}") {
         exclude(group: "net.fabricmc.fabric-api")
-    }
-    implementation "software.bernie.geckolib:geckolib-neoforge-${minecraft_version}:${geckolib_version}"
-    implementation "curse.maven:easy-npc-559312:6009031"
+    })
+    implementation include("software.bernie.geckolib:geckolib-neoforge-${minecraft_version}:${geckolib_version}")
+    implementation include("curse.maven:easy-npc-559312:6009031")
 
     implementation include("io.github.llamalad7:mixinextras-neoforge:${mixin_extras_version}")
 
