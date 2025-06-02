@@ -4,6 +4,7 @@
   "package": "com.cerbon.brigadista_training.mixin",
   "compatibilityLevel": "JAVA_17",
   "mixins": [
+    "ServerPlayerMixin"
   ],
   "client": [
     "test.TestMixin"
