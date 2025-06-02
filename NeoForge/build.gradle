@@ -36,6 +36,7 @@ dependencies {
         exclude(group: "net.fabricmc.fabric-api")
     }
     implementation "software.bernie.geckolib:geckolib-neoforge-${minecraft_version}:${geckolib_version}"
+    implementation "curse.maven:easy-npc-559312:6009031"
 
     implementation include("io.github.llamalad7:mixinextras-neoforge:${mixin_extras_version}")
 
