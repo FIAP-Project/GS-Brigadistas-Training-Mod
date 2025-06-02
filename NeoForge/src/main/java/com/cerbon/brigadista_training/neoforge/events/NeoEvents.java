@@ -40,6 +40,7 @@ public class NeoEvents {
                 if (spawnPoint == null) return;
 
                 serverPlayer.absMoveTo(spawnPoint.getX(), spawnPoint.getY(), spawnPoint.getZ());
+                serverPlayer.removeTag("inMission");
             }
         }
     }
