@@ -17,7 +17,14 @@ public class BDTBlocks {
 
     public static final RegistryEntry<InfoOverlayBlock> FOGUEIRA_MAL_APAGADA = BLOCKS.register(
             "fogueira_mal_apagada",
-            () -> new InfoOverlayBlock(BlockBehaviour.Properties.of().noOcclusion()).setText("Fogueiras que não são completamente extintas podem manter brasas ativas por horas. Com ventos, essas brasas podem se espalhar e iniciar incêndios em áreas próximas.")
+            () -> new InfoOverlayBlock(BlockBehaviour.Properties.of().noOcclusion())
+                    .setText("Fogueiras que não são completamente extintas podem manter brasas ativas por horas. Com ventos, essas brasas podem se espalhar e iniciar incêndios em áreas próximas.")
+    );
+
+    public static final RegistryEntry<InfoOverlayBlock> POSTE = BLOCKS.register(
+            "poste",
+            () -> new InfoOverlayBlock(BlockBehaviour.Properties.of().noOcclusion())
+                    .setText("Cabos de energia que caem ao solo podem gerar faíscas ou curtos-circuitos, especialmente em contato com vegetação seca, iniciando incêndios.")
     );
 
     public static void register() {

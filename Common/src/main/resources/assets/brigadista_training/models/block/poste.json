@@ -1,0 +1,7 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+    "all": "brigadista_training:block/poste",
+    "particle": "brigadista_training:block/poste"
+  }
+}

@@ -20,7 +20,7 @@ import java.util.Map;
 public class NeoEvents {
     private static final Map<BlockPos, RegistryEntry<InfoOverlayBlock>> POS_BLOCK_MAP = Map.of(
             new BlockPos(167, 83, -293), BDTBlocks.FOGUEIRA_MAL_APAGADA,
-            new BlockPos(89,  81, -213), BDTBlocks.FOGUEIRA_MAL_APAGADA,
+            new BlockPos(89,  81, -213), BDTBlocks.POSTE,
             new BlockPos(121, 85, -276), BDTBlocks.FOGUEIRA_MAL_APAGADA,
             new BlockPos(110, 88, -286), BDTBlocks.FOGUEIRA_MAL_APAGADA,
             new BlockPos(180, 80, -294), BDTBlocks.FOGUEIRA_MAL_APAGADA
