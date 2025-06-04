@@ -1,0 +1,7 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+    "all": "brigadista_training:block/fogueira_mal_apagada",
+    "particle": "brigadista_training:block/fogueira_mal_apagada"
+  }
+}

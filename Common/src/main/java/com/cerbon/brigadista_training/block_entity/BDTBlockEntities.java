@@ -18,7 +18,7 @@ public class BDTBlockEntities {
     public static final RegistryEntry<BlockEntityType<InfoOverlayBlockEntity>> INFO_OVERLAY_BLOCK_ENTITY = BLOCK_ENTITIES.register(
             "info_overlay_block_entity",
             () -> BlockEntityType.Builder
-                    .of(InfoOverlayBlockEntity::new, BDTBlocks.TEST_BLOCK.get())
+                    .of(InfoOverlayBlockEntity::new, BDTBlocks.FOGUEIRA_MAL_APAGADA.get())
                     .build(null)
     );
 
