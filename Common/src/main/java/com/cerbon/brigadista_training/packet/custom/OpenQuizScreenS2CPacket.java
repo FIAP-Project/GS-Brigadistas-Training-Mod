@@ -10,22 +10,22 @@ import net.minecraft.network.codec.StreamCodec;
 import net.minecraft.network.protocol.common.custom.CustomPacketPayload;
 import net.minecraft.resources.ResourceLocation;
 
-public class OpenQuizScreenPacket {
+public class OpenQuizScreenS2CPacket {
     public static final ResourceLocation CHANNEL = ResourceLocation.fromNamespaceAndPath(Constants.MOD_ID, "open_quiz_screen_s2c_packet");
-    public static final StreamCodec<FriendlyByteBuf, OpenQuizScreenPacket> STREAM_CODEC = new StreamCodec<>() {
+    public static final StreamCodec<FriendlyByteBuf, OpenQuizScreenS2CPacket> STREAM_CODEC = new StreamCodec<>() {
 
         @Override
-        public OpenQuizScreenPacket decode(FriendlyByteBuf object) {
+        public OpenQuizScreenS2CPacket decode(FriendlyByteBuf object) {
             return null;
         }
 
         @Override
-        public void encode(FriendlyByteBuf object, OpenQuizScreenPacket object2) {}
+        public void encode(FriendlyByteBuf object, OpenQuizScreenS2CPacket object2) {}
     };
 
-    public OpenQuizScreenPacket() {}
+    public OpenQuizScreenS2CPacket() {}
 
-    public static void handle(PacketContext<OpenQuizScreenPacket> ctx) {
+    public static void handle(PacketContext<OpenQuizScreenS2CPacket> ctx) {
         if (ctx.side().equals(Side.SERVER)) return;
 
         Minecraft.getInstance().setScreen(new QuizScreen());
