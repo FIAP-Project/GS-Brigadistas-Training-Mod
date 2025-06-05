@@ -30,7 +30,7 @@ public class InfoOverlayBlockEntity extends BlockEntity implements GeoBlockEntit
 
     @Environment(EnvType.CLIENT)
     public static void clientTick(Level level, BlockPos blockPos, BlockState blockState, InfoOverlayBlockEntity blockEntity) {
-        if (!level.isClientSide()) return;
+        if (!level.isClientSide() || blockEntity.text.isBlank()) return;
 
         Player player = Minecraft.getInstance().player;
         if (player == null) return;
