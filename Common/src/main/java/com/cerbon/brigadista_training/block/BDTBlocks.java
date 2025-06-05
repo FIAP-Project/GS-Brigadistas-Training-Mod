@@ -27,6 +27,12 @@ public class BDTBlocks {
                     .setText("Cabos de energia que caem ao solo podem gerar faíscas ou curtos-circuitos, especialmente em contato com vegetação seca, iniciando incêndios.")
     );
 
+    public static final RegistryEntry<InfoOverlayBlock> GARRAFAS_QUEBRADAS = BLOCKS.register(
+            "garrafas_quebradas",
+            () -> new InfoOverlayBlock(BlockBehaviour.Properties.of().noOcclusion())
+                    .setText("Garrafas ou cacos de vidro deixados em áreas abertas podem, sob intensa luz solar, concentrar os raios e gerar calor suficiente para iniciar queimadas, especialmente em vegetação seca.")
+    );
+
     public static void register() {
         BLOCKS.register();
     }
