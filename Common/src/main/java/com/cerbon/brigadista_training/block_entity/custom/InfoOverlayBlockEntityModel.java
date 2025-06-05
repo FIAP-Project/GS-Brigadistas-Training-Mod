@@ -19,6 +19,7 @@ public class InfoOverlayBlockEntityModel extends DefaultedBlockGeoModel<InfoOver
             case "brigadista_training:fogueira_mal_apagada" -> buildFormattedModelPath(ResourceLocation.fromNamespaceAndPath(BrigadistaTraining.MOD_ID, "fogueira_mal_apagada"));
             case "brigadista_training:poste" -> buildFormattedModelPath(ResourceLocation.fromNamespaceAndPath(BrigadistaTraining.MOD_ID, "poste"));
             case "brigadista_training:garrafas_quebradas" -> buildFormattedModelPath(ResourceLocation.fromNamespaceAndPath(BrigadistaTraining.MOD_ID, "garrafas_quebradas"));
+            case "brigadista_training:bituca_de_cigarro" -> buildFormattedModelPath(ResourceLocation.fromNamespaceAndPath(BrigadistaTraining.MOD_ID, "bituca_de_cigarro"));
             default -> throw new IllegalStateException("Unexpected value: " + blockKey);
         };
     }
@@ -31,6 +32,7 @@ public class InfoOverlayBlockEntityModel extends DefaultedBlockGeoModel<InfoOver
             case "brigadista_training:fogueira_mal_apagada" -> buildFormattedTexturePath(ResourceLocation.fromNamespaceAndPath(BrigadistaTraining.MOD_ID, "fogueira_mal_apagada"));
             case "brigadista_training:poste" -> buildFormattedTexturePath(ResourceLocation.fromNamespaceAndPath(BrigadistaTraining.MOD_ID, "poste"));
             case "brigadista_training:garrafas_quebradas" -> buildFormattedTexturePath(ResourceLocation.fromNamespaceAndPath(BrigadistaTraining.MOD_ID, "garrafas_quebradas"));
+            case "brigadista_training:bituca_de_cigarro" -> buildFormattedTexturePath(ResourceLocation.fromNamespaceAndPath(BrigadistaTraining.MOD_ID, "bituca_de_cigarro"));
             default -> throw new IllegalStateException("Unexpected value: " + blockKey);
         };
     }

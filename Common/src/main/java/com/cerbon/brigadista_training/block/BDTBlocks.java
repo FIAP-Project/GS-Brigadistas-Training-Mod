@@ -33,6 +33,12 @@ public class BDTBlocks {
                     .setText("Garrafas ou cacos de vidro deixados em áreas abertas podem, sob intensa luz solar, concentrar os raios e gerar calor suficiente para iniciar queimadas, especialmente em vegetação seca.")
     );
 
+    public static final RegistryEntry<InfoOverlayBlock> BITUCA_DE_CIGARRO = BLOCKS.register(
+            "bituca_de_cigarro",
+            () -> new InfoOverlayBlock(BlockBehaviour.Properties.of().noOcclusion())
+                    .setText("Descarte inadequado de bitucas de cigarro, especialmente em áreas com vegetação seca, pode iniciar incêndios. O risco aumenta muito com o volume de descarte em condições propícias.")
+    );
+
     public static void register() {
         BLOCKS.register();
     }
