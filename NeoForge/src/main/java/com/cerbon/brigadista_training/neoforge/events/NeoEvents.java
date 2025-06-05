@@ -21,11 +21,11 @@ import java.util.Map;
 @EventBusSubscriber(modid = BrigadistaTraining.MOD_ID, bus = EventBusSubscriber.Bus.GAME)
 public class NeoEvents {
     private static final Map<BlockPos, RegistryEntry<InfoOverlayBlock>> POS_BLOCK_MAP = Map.of(
-            new BlockPos(167, 83, -293), BDTBlocks.FOGUEIRA_MAL_APAGADA,
-            new BlockPos(89,  81, -213), BDTBlocks.POSTE,
-            new BlockPos(121, 85, -276), BDTBlocks.GARRAFAS_QUEBRADAS,
-            new BlockPos(110, 88, -286), BDTBlocks.BITUCA_DE_CIGARRO,
-            new BlockPos(180, 80, -294), BDTBlocks.FOGUEIRA_MAL_APAGADA
+            new BlockPos(118, 80, -192), BDTBlocks.FOGUEIRA_MAL_APAGADA,
+            new BlockPos(197, 79, -225), BDTBlocks.POSTE,
+            new BlockPos(155, 80, -282), BDTBlocks.GARRAFAS_QUEBRADAS,
+            new BlockPos(96,  97, -295), BDTBlocks.BITUCA_DE_CIGARRO,
+            new BlockPos(113, 79, -219), BDTBlocks.FOGUEIRA_MAL_APAGADA
     );
 
     @SubscribeEvent
