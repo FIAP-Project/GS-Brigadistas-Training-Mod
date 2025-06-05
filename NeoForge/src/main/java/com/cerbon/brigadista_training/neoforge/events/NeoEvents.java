@@ -3,7 +3,9 @@ package com.cerbon.brigadista_training.neoforge.events;
 import com.cerbon.brigadista_training.BrigadistaTraining;
 import com.cerbon.brigadista_training.block.BDTBlocks;
 import com.cerbon.brigadista_training.block.custom.InfoOverlayBlock;
+import com.cerbon.brigadista_training.packet.custom.OpenQuizScreenPacket;
 import com.cerbon.brigadista_training.util.IServerPlayerMixin;
+import com.cerbon.cerbons_api.api.network.Dispatcher;
 import com.cerbon.cerbons_api.api.registry.RegistryEntry;
 import net.minecraft.core.BlockPos;
 import net.minecraft.server.level.ServerPlayer;
@@ -41,6 +43,8 @@ public class NeoEvents {
 
                 serverPlayer.absMoveTo(spawnPoint.getX(), spawnPoint.getY(), spawnPoint.getZ());
                 serverPlayer.removeTag("inMission");
+
+                Dispatcher.sendToClient(new OpenQuizScreenPacket(), serverPlayer);
             }
         }
     }
