@@ -39,6 +39,12 @@ public class BDTBlocks {
                     .setText("Descarte inadequado de bitucas de cigarro, especialmente em áreas com vegetação seca, pode iniciar incêndios. O risco aumenta muito com o volume de descarte em condições propícias.")
     );
 
+    public static final RegistryEntry<InfoOverlayBlock> BALLOON = BLOCKS.register(
+            "balloon",
+            () -> new InfoOverlayBlock(BlockBehaviour.Properties.of().noOcclusion())
+                    .setText("Soltar balões durante festas juninas é ilegal e perigoso. Balões podem percorrer longas distâncias e, ao cair ainda acesos, iniciar incêndios em áreas urbanas e florestais.")
+    );
+
     public static final RegistryEntry<InfoOverlayBlock> FIRE_EXTINGUISHER = BLOCKS.register(
             "fire_extinguisher",
             () -> new InfoOverlayBlock(BlockBehaviour.Properties.of().noOcclusion())

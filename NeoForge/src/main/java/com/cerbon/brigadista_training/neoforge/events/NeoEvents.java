@@ -25,7 +25,7 @@ public class NeoEvents {
             new BlockPos(197, 79, -225), BDTBlocks.POSTE,
             new BlockPos(155, 80, -282), BDTBlocks.GARRAFAS_QUEBRADAS,
             new BlockPos(96,  97, -295), BDTBlocks.BITUCA_DE_CIGARRO,
-            new BlockPos(113, 79, -219), BDTBlocks.FOGUEIRA_MAL_APAGADA
+            new BlockPos(113, 79, -219), BDTBlocks.BALLOON
     );
 
     @SubscribeEvent
