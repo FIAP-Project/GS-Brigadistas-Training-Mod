@@ -18,7 +18,7 @@ https://drive.google.com/file/d/1F05WO9xo5-DOGXbZuFCeu5F7Oso4niV4/view?usp=shari
 https://drive.google.com/file/d/1G0uLeg-QXrXFlogtZxYCvxGFRafsjVo1/view?usp=sharing
 
 # Donwnload
-Mapa e aqruivo jars podem ser baixados em [releases](https://github.com/FIAP-Project/GS-Brigadistas-Training-Mod/releases)
+Mapa e arquivo jar podem ser baixados em [releases](https://github.com/FIAP-Project/GS-Brigadistas-Training-Mod/releases)
 
 # Equipe
 Fabrício Gomes – RM  558216
