@@ -19,3 +19,8 @@ https://drive.google.com/file/d/1G0uLeg-QXrXFlogtZxYCvxGFRafsjVo1/view?usp=shari
 
 # Donwnload
 Mapa e aqruivo jars podem ser baixados em [releases](https://github.com/FIAP-Project/GS-Brigadistas-Training-Mod/releases)
+
+# Equipe
+Fabrício Gomes – RM  558216
+Felipe Cerboncini – RM  554909
+Vitor Chaves – RM  557067
