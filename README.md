@@ -22,5 +22,7 @@ Mapa e arquivo jar podem ser baixados em [releases](https://github.com/FIAP-Proj
 
 # Equipe
 Fabrício Gomes – RM  558216
+
 Felipe Cerboncini – RM  554909
+
 Vitor Chaves – RM  557067
